@@ -1,36 +1,36 @@
-# - Try to find the CMakeDemo library
+# - Try to find the Imagequality_Dalys library
 # Once done this will define
 #
-#  CMakeDemo_FOUND - system has CMakeDemo
-#  CMakeDemo_INCLUDE_DIR - CMakeDemo include directory
-#  CMakeDemo_LIB - CMakeDemo library directory
-#  CMakeDemo_LIBRARIES - CMakeDemo libraries to link
+#  Imagequality_Dalys_FOUND - system has Imagequality_Dalys
+#  Imagequality_Dalys_INCLUDE_DIR - Imagequality_Dalys include directory
+#  Imagequality_Dalys_LIB - Imagequality_Dalys library directory
+#  Imagequality_Dalys_LIBRARIES - Imagequality_Dalys libraries to link
 
-if(CMakeDemo_FOUND)
+if(Imagequality_Dalys_FOUND)
     return()
 endif()
 
-# We prioritize libraries installed in /usr/local with the prefix .../CMakeDemo-*, 
+# We prioritize libraries installed in /usr/local with the prefix .../Imagequality_Dalys-*,
 # so we make a list of them here
-file(GLOB lib_glob "/usr/local/lib/CMakeDemo-*")
-file(GLOB inc_glob "/usr/local/include/CMakeDemo-*")
+file(GLOB lib_glob "/usr/local/lib/Imagequality_Dalys-*")
+file(GLOB inc_glob "/usr/local/include/Imagequality_Dalys-*")
 
-# Find the library with the name "CMakeDemo" on the system. Store the final path
-# in the variable CMakeDemo_LIB
-find_library(CMakeDemo_LIB 
-    # The library is named "CMakeDemo", but can have various library forms, like
-    # libCMakeDemo.a, libCMakeDemo.so, libCMakeDemo.so.1.x, etc. This should
+# Find the library with the name "Imagequality_Dalys" on the system. Store the final path
+# in the variable Imagequality_Dalys_LIB
+find_library(Imagequality_Dalys_LIB
+    # The library is named "Imagequality_Dalys", but can have various library forms, like
+    # libImagequality_Dalys.a, libImagequality_Dalys.so, libImagequality_Dalys.so.1.x, etc. This should
     # search for any of these.
-    NAMES CMakeDemo
+    NAMES Imagequality_Dalys
     # Provide a list of places to look based on prior knowledge about the system.
     # We want the user to override /usr/local with environment variables, so
     # this is included here.
     HINTS
-        ${CMakeDemo_DIR}
-        ${CMAKEDEMO_DIR}
-        $ENV{CMakeDemo_DIR}
-        $ENV{CMAKEDEMO_DIR}
-        ENV CMAKEDEMO_DIR
+        ${Imagequality_Dalys_DIR}
+        ${Imagequality_Dalys_DIR}
+        $ENV{Imagequality_Dalys_DIR}
+        $ENV{Imagequality_Dalys_DIR}
+        ENV Imagequality_Dalys_DIR
     # Provide a list of places to look as defaults. /usr/local shows up because
     # that's the default install location for most libs. The globbed paths also
     # are placed here as well.
@@ -45,16 +45,16 @@ find_library(CMakeDemo_LIB
         lib
 )
 
-# Find the path to the file "source_file.hpp" on the system. Store the final
-# path in the variables CMakeDemo_INCLUDE_DIR. The HINTS, PATHS, and
+# Find the path to the file "ImageQuality.hpp" on the system. Store the final
+# path in the variables Imagequality_Dalys_INCLUDE_DIR. The HINTS, PATHS, and
 # PATH_SUFFIXES, arguments have the same meaning as in find_library().
-find_path(CMakeDemo_INCLUDE_DIR source_file.hpp
+find_path(Imagequality_Dalys_INCLUDE_DIR source_file.hpp
     HINTS
-        ${CMakeDemo_DIR}
-        ${CMAKEDEMO_DIR}
-        $ENV{CMakeDemo_DIR}
-        $ENV{CMAKEDEMO_DIR}
-        ENV CMAKEDEMO_DIR
+        ${Imagequality_Dalys_DIR}
+        ${Imagequality_Dalys_DIR}
+        $ENV{Imagequality_Dalys_DIR}
+        $ENV{Imagequality_Dalys_DIR}
+        ENV Imagequality_Dalys_DIR
     PATHS
         /usr
         /usr/local
@@ -67,33 +67,33 @@ find_path(CMakeDemo_INCLUDE_DIR source_file.hpp
 
 # Check that both the paths to the include and library directory were found.
 include(FindPackageHandleStandardArgs)
-find_package_handle_standard_args(CMakeDemo
-    "\nCMakeDemo not found --- You can download it using:\n\tgit clone 
-    https://github.com/mmorse1217/cmake-project-template\n and setting the CMAKEDEMO_DIR environment variable accordingly"
-    CMakeDemo_LIB CMakeDemo_INCLUDE_DIR)
+find_package_handle_standard_args(Imagequality_Dalys
+    "\nImagequality_Dalys not found --- You can download it using:\n\tgit clone
+    https://github.com/mmorse1217/cmake-project-template\n and setting the Imagequality_Dalys_DIR environment variable accordingly"
+    Imagequality_Dalys_LIB Imagequality_Dalys_INCLUDE_DIR)
 
 # These variables don't show up in the GUI version of CMake. Not required but
 # people seem to do this...
-mark_as_advanced(CMakeDemo_INCLUDE_DIR CMakeDemo_LIB)
+mark_as_advanced(Imagequality_Dalys_INCLUDE_DIR Imagequality_Dalys_LIB)
 
 # Finish defining the variables specified above. Variables names here follow
 # CMake convention.
-set(CMakeDemo_INCLUDE_DIRS ${CMakeDemo_INCLUDE_DIR})
-set(CMakeDemo_LIBRARIES ${CMakeDemo_LIB})
+set(Imagequality_Dalys_INCLUDE_DIRS ${Imagequality_Dalys_INCLUDE_DIR})
+set(Imagequality_Dalys_LIBRARIES ${Imagequality_Dalys_LIB})
 
 # If the above CMake code was successful and we found the library, and there is
 # no target defined, lets make one.
-if(CMakeDemo_FOUND AND NOT TARGET CMakeDemo::CMakeDemo)
-    add_library(CMakeDemo::CMakeDemo UNKNOWN IMPORTED)
+if(Imagequality_Dalys_FOUND AND NOT TARGET Imagequality_Dalys::Imagequality_Dalys)
+    add_library(Imagequality_Dalys::Imagequality_Dalys UNKNOWN IMPORTED)
     # Set location of interface include directory, i.e., the directory
     # containing the header files for the installed library
-    set_target_properties(CMakeDemo::CMakeDemo PROPERTIES
-        INTERFACE_INCLUDE_DIRECTORIES "${CMakeDemo_INCLUDE_DIRS}"
+    set_target_properties(Imagequality_Dalys::Imagequality_Dalys PROPERTIES
+        INTERFACE_INCLUDE_DIRECTORIES "${Imagequality_Dalys_INCLUDE_DIRS}"
         )
 
     # Set location of the installed library
-    set_target_properties(CMakeDemo::CMakeDemo PROPERTIES
+    set_target_properties(Imagequality_Dalys::Imagequality_Dalys PROPERTIES
         IMPORTED_LINK_INTERFACE_LANGUAGES "CXX"
-        IMPORTED_LOCATION "${CMakeDemo_LIBRARIES}"
+        IMPORTED_LOCATION "${Imagequality_Dalys_LIBRARIES}"
         )
 endif()

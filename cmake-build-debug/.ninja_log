@@ -1,0 +1,8 @@
+# ninja log v6
+1	14	1738105934671936162	clean	bab487db8c7a5625
+8	1704	1738105934942630423	CMakeFiles/ImageQuality_Dalys.dir/src/ImageQuality.cpp.o	a6528c694d98ffcd
+8	1707	1738105934942986577	CMakeFiles/ImageQuality_Dalys.dir/src/main.cpp.o	8c4e00dfa1eef3bb
+8	1709	1738105934943133238	CMakeFiles/ImageQuality_Executable.dir/src/main.cpp.o	cf9ae97800d0c40e
+8	1711	1738105934943274692	CMakeFiles/ImageQuality_Executable.dir/src/ImageQuality.cpp.o	825576a3f9d4bfbb
+1707	1743	1738105936642305139	/Users/ramprabhu/CLionProjects/CG_project/lib/libImageQuality_Dalys.a	6acfebd92206be7d
+1712	1846	1738105936646377617	/Users/ramprabhu/CLionProjects/CG_project/bin/ImageQuality_Executable	12aa6d804b8fce90

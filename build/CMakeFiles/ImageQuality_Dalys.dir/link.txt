@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc /Users/ramprabhu/CLionProjects/CG_project/lib/libImageQuality_Dalys.a CMakeFiles/ImageQuality_Dalys.dir/src/ImageQuality.cpp.o CMakeFiles/ImageQuality_Dalys.dir/src/main.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib /Users/ramprabhu/CLionProjects/CG_project/lib/libImageQuality_Dalys.a
